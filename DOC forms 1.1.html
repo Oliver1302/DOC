@@ -639,40 +639,79 @@
                   
                   <div class="bs-stepper wizard-vertical vertical mt-2">
                     <div class="bs-stepper-header gap-lg-2">
-                      <div class="step" data-target="#program-form">
+                      <div class="step" data-target="#household-form">
                         <button type="button" class="step-trigger">
                           <span class="bs-stepper-circle"><i class="mdi mdi-check"></i></span>
                           <span class="bs-stepper-label">
                             <span class="bs-stepper-number">01</span>
                             <span class="d-flex flex-column gap-1 ms-2">
-                              <span class="bs-stepper-title">Programs</span>
-                              <span class="bs-stepper-subtitle">add Program</span>
+                              <span class="bs-stepper-title">Household</span>
+                              <span class="bs-stepper-subtitle">Setup Household details</span>
                             </span>
                           </span>
                         </button>
                       </div>
                       <div class="line"></div>
-                      <div class="step" data-target="#aggregate-form">
+                      <div class="step" data-target="#wellbeing-status">
                         <button type="button" class="step-trigger">
                           <span class="bs-stepper-circle"><i class="mdi mdi-check"></i></span>
                           <span class="bs-stepper-label">
                             <span class="bs-stepper-number">02</span>
                             <span class="d-flex flex-column gap-1 ms-2">
-                              <span class="bs-stepper-title">Aggregate events</span>
-                              <span class="bs-stepper-subtitle">Add event</span>
+                              <span class="bs-stepper-title">wellbeing status</span>
+                              <span class="bs-stepper-subtitle">Add wellbeing status</span>
                             </span>
                           </span>
                         </button>
                       </div>
                       <div class="line"></div>
-                      <div class="step" data-target="#distribution-form">
+                      <div class="step" data-target="#income-sources">
                         <button type="button" class="step-trigger">
                           <span class="bs-stepper-circle"><i class="mdi mdi-check"></i></span>
                           <span class="bs-stepper-label">
                             <span class="bs-stepper-number">03</span>
                             <span class="d-flex flex-column gap-1 ms-2">
-                              <span class="bs-stepper-title">Distributions</span>
-                              <span class="bs-stepper-subtitle">Add distribution</span>
+                              <span class="bs-stepper-title">Income sources</span>
+                              <span class="bs-stepper-subtitle">Add income details</span>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="line"></div>
+                      <div class="step" data-target="#livestock-form">
+                        <button type="button" class="step-trigger">
+                          <span class="bs-stepper-circle"><i class="mdi mdi-check"></i></span>
+                          <span class="bs-stepper-label">
+                            <span class="bs-stepper-number">04</span>
+                            <span class="d-flex flex-column gap-1 ms-2">
+                              <span class="bs-stepper-title">Livestock</span>
+                              <span class="bs-stepper-subtitle">Add Livestock details</span>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="line"></div>
+                      <div class="step" data-target="#poverty-issues-form">
+                        <button type="button" class="step-trigger">
+                          <span class="bs-stepper-circle"><i class="mdi mdi-check"></i></span>
+                          <span class="bs-stepper-label">
+                            <span class="bs-stepper-number">05</span>
+                            <span class="d-flex flex-column gap-1 ms-2">
+                              <span class="bs-stepper-title">Poverty Issues</span>
+                              <span class="bs-stepper-subtitle">Add Poverty Issues</span>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                      <div class="line"></div>
+                      <div class="step" data-target="#improvement-indicators-form">
+                        <button type="button" class="step-trigger">
+                          <span class="bs-stepper-circle"><i class="mdi mdi-check"></i></span>
+                          <span class="bs-stepper-label">
+                            <span class="bs-stepper-number">06</span>
+                            <span class="d-flex flex-column gap-1 ms-2">
+                              <span class="bs-stepper-title">Improvement Indicators</span>
+                              <span class="bs-stepper-subtitle">Add improvement Indicators</span>
                             </span>
                           </span>
                         </button>
@@ -680,65 +719,77 @@
                     </div>
                     <div class="bs-stepper-content">
                       <form onSubmit="return false">
-                        <!--Program Details -->
-                        <div id="program-form" class="content">
+                        <!--household Details -->
+                        <div id="household-form" class="content">
                           <div class="content-header mb-3">
-                            <h6 class="mb-0">Programs</h6>
-                            <small>Enter Program Details.</small>
+                            <h6 class="mb-0">Household Details</h6>
+                            <small>Enter the Household Details.</small>
                           </div>
                           <div class="row g-4">
                             <div class="col-sm-6">
                               <div class="form-floating form-floating-outline">
-                                <select id="program-name" class="form-select">
-                                  <option value="" disabled selected>Select Program Name</option>
-                                  <option value="Family Empowerment">Family Empowerment</option>
-                                  <option value="Youth Empowerment">Youth Empowerment</option>
-                                  <option value="Special Needs Education">Special Needs Education</option>
-                                  <option value="Regular education support">Regular education support</option>
-                                  <option value="Nutrition">Nutrition</option>
-                                  <option value="Elderly">Elderly</option>
-                                  <option value="Youth recreation">Youth recreation</option>
-                                  <option value="Homeless Youth (Upendo)">Homeless Youth (Upendo)</option>
+                                <input type="text" id="doc-service-location" class="form-control" placeholder="DOC Service Location" />
+                                <label for="doc-service-location">Daughters of Charity Service Location</label>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="form-floating form-floating-outline">
+                                <input type="text" id="social-worker" class="form-control" placeholder="Social Worker" />
+                                <label for="social-worker">Responsible Social Worker</label>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="form-floating form-floating-outline">
+                                <input type="text" id="household-id" class="form-control" placeholder="Household ID" />
+                                <label for="household-id">Household ID</label>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="form-floating form-floating-outline">
+                                <input type="text" id="county" class="form-control" placeholder="County" />
+                                <label for="county">County</label>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="form-floating form-floating-outline">
+                                <input type="text" id="subcounty" class="form-control" placeholder="Subcounty" />
+                                <label for="subcounty">Subcounty</label>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="form-floating form-floating-outline">
+                                <input type="text" id="ward" class="form-control" placeholder="Ward" />
+                                <label for="ward">Ward</label>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="form-floating form-floating-outline">
+                                <input type="text" id="residential-address" class="form-control" placeholder="Residential Address / Landmarks" />
+                                <label for="residential-address">Residential Address / Landmarks</label>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="form-floating form-floating-outline">
+                                <select id="landowner-flag" class="form-select">
+                                  <option value="" disabled selected>Select Landowner Flag</option>
+                                  <option value="yes">Yes</option>
+                                  <option value="no">No</option>
                                 </select>
-                                <label for="program-name">Program Name</label>
+                                <label for="landowner-flag">Landowner Flag</label>
                               </div>
                             </div>
                             
-                            <div class="col-sm-6">
+                            <div class="col-sm-12">
                               <div class="form-floating form-floating-outline">
-                                <input type="text" id="responsible-social-worker" class="form-control" placeholder="Responsible Social Worker" />
-                                <label for="responsible-social-worker">Responsible Social Worker</label>
+                                <textarea id="household-notes" class="form-control" placeholder="Household Notes"></textarea>
+                                <label for="household-notes">Household Notes</label>
                               </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-12">
                               <div class="form-floating form-floating-outline">
-                                <input type="date" id="program-begin-date" class="form-control" placeholder="Program Begin Date" />
-                                <label for="program-begin-date">Program Begin Date</label>
-                              </div>
-                            </div>
-                            <div class="col-sm-6">
-                              <div class="form-floating form-floating-outline">
-                                <input type="date" id="program-exit-date" class="form-control" placeholder="Program Exit Date" />
-                                <label for="program-exit-date">Program Exit Date</label>
-                              </div>
-                            </div>
-                            <div class="col-sm-6">
-                              <div class="form-floating form-floating-outline">
-                                <input type="text" id="program-exit-reason" class="form-control" placeholder="Program Exit Reason" />
-                                <label for="program-exit-reason">Program Exit Reason</label>
-                              </div>
-                            </div>
-                            <div class="col-sm-6">
-                              <div class="form-floating form-floating-outline">
-                                <input type="text" id="home-based-care-flag" class="form-control" placeholder="Home Based Care Flag" />
-                                <label for="home-based-care-flag">Home Based Care Flag</label>
-                              </div>
-                            </div>
-                            <div class="col-sm-6">
-                              <div class="form-floating form-floating-outline">
-                                <input type="text" id="cohort-identifier" class="form-control" placeholder="Cohort Identifier" />
-                                <label for="cohort-identifier">Cohort Identifier</label>
-                              </div>
+                                <input type="file" id="attachments" class="form-control" placeholder="Attachments" multiple />
+                                <label for="attachments">Attachments</label>
+                              </div>                              
                             </div>
                             <div class="col-12 d-flex justify-content-between">
                               <button class="btn btn-outline-secondary btn-prev" disabled>
@@ -752,102 +803,145 @@
                             </div>
                           </div>
                         </div>
-                        
-                        <!--Aggregate form-->
-                        <div id="aggregate-form" class="content">
+                        <!--wellbeing status-->
+                        <div id="wellbeing-status" class="content">
                           <div class="content-header mb-3">
-                            <h6 class="mb-0">Aggregate Events</h6>
-                            <small>Enter Event Details.</small>
+                            <h6 class="mb-0">Economic wellbeing status</h6>
+                            <small>Enter the economic wellbeing status.</small>
                           </div>
                           <div class="row g-4">
                             <div class="col-sm-6">
                               <div class="form-floating form-floating-outline">
-                                <input type="text" id="activity-name" class="form-control" placeholder="Activity Name" />
-                                <label for="activity-name">Activity Name</label>
+                                <input type="text" id="assessment-date" class="form-control" placeholder="Assessment Date" />
+                                <label for="assessment-date">Assessment Date</label>
                               </div>
                             </div>
                             <div class="col-sm-6">
                               <div class="form-floating form-floating-outline">
-                                <input type="text" id="event-description" class="form-control" placeholder="Event Description" />
-                                <label for="event-description">Event Description</label>
+                                <input type="text" id="current-income-amount" class="form-control" placeholder="Current Income Amount" />
+                                <label for="current-income-amount">Current Income Amount</label>
                               </div>
                             </div>
                             <div class="col-sm-6">
                               <div class="form-floating form-floating-outline">
-                                <input type="date" id="activity-date" class="form-control" placeholder="Activity Date" />
-                                <label for="activity-date">Activity Date</label>
+                                <input type="text" id="current-income-frequency" class="form-control" placeholder="Current Income Frequency" />
+                                <label for="current-income-frequency">Current Income Frequency</label>
                               </div>
                             </div>
                             <div class="col-sm-6">
                               <div class="form-floating form-floating-outline">
-                                <input type="text" id="school-fees-charged" class="form-control" placeholder="School Fees Charged" />
-                                <label for="school-fees-charged">School Fees Charged</label>
+                                <input type="text" id="nutritional-survey-score" class="form-control" placeholder="Nutritional Survey Score" />
+                                <label for="nutritional-survey-score">Nutritional Survey Score</label>
                               </div>
                             </div>
                             <div class="col-sm-6">
                               <div class="form-floating form-floating-outline">
-                                <input type="text" id="transport-fees-charged" class="form-control" placeholder="Transport Fees Charged" />
-                                <label for="transport-fees-charged">Transport Fees Charged</label>
+                                <input type="text" id="school-fees-paid" class="form-control" placeholder="School Fees Paid" />
+                                <label for="school-fees-paid">School Fees Paid</label>
                               </div>
                             </div>
                             <div class="col-sm-6">
                               <div class="form-floating form-floating-outline">
-                                <input type="text" id="progress-milestones-reached" class="form-control" placeholder="Progress Milestones Reached" />
-                                <label for="progress-milestones-reached">Progress Milestones Reached</label>
+                                <input type="text" id="rent-paid" class="form-control" placeholder="Rent Paid" />
+                                <label for="rent-paid">Rent Paid</label>
                               </div>
                             </div>
                             <div class="col-sm-6">
                               <div class="form-floating form-floating-outline">
-                                <input type="text" id="recurring-event-flag" class="form-control" placeholder="Recurring Event Flag" />
-                                <label for="recurring-event-flag">Recurring Event Flag</label>
-                              </div>
-                            </div>
-                            <div class="col-sm-12">
-                              <div class="form-floating form-floating-outline">
-                                <textarea id="notes" class="form-control" placeholder="Notes"></textarea>
-                                <label for="notes">Notes</label>
+                                <input type="text" id="medications-paid" class="form-control" placeholder="Medications Paid" />
+                                <label for="medications-paid">Medications Paid</label>
                               </div>
                             </div>
                             <div class="col-sm-6">
                               <div class="form-floating form-floating-outline">
-                                <input type="text" id="aggregate-tracking-flag" class="form-control" placeholder="Aggregate Tracking Flag" />
-                                <label for="aggregate-tracking-flag">Aggregate Tracking Flag</label>
+                                <input type="text" id="housing-condition" class="form-control" placeholder="Housing Condition" />
+                                <label for="housing-condition">Housing Condition</label>
                               </div>
                             </div>
                             <div class="col-sm-6">
                               <div class="form-floating form-floating-outline">
-                                <input type="text" id="aggregate-event-attendees-adult-female" class="form-control" placeholder="Number of Attendees - Adult Female" />
-                                <label for="aggregate-event-attendees-adult-female">Number of Attendees - Adult Female</label>
+                                <input type="text" id="assessment-of-vulnerability" class="form-control" placeholder="Assessment of Vulnerability" />
+                                <label for="assessment-of-vulnerability">Assessment of Vulnerability</label>
+                              </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-between">
+                              <button class="btn btn-outline-secondary btn-prev">
+                                <i class="mdi mdi-arrow-left me-sm-1 me-0"></i>
+                                <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                              </button>
+                              <button class="btn btn-primary btn-next">
+                                <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span>
+                                <i class="mdi mdi-arrow-right"></i>
+                              </button>
+                            </div>
+                          </div>
+                        
+                        </div>
+                        <!-- Income sources -->
+                        <div id="income-sources" class="content">
+                          <div class="content-header mb-3">
+                            <h6 class="mb-0">Income Sources</h6>
+                            <small>Enter the Income Sources.</small>
+                          </div>
+                          <div class="row g-4">
+                            <div class="col-sm-6">
+                              <div class="form-floating form-floating-outline">
+                                <input type="text" id="income-source-id" class="form-control" placeholder="Income Source ID" />
+                                <label for="income-source-id">Income Source ID</label>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+  <div class="form-floating form-floating-outline">
+    <select id="income-source-type" class="form-control">
+      <option value="">Select Income Source Type</option>
+      <option value="Casual Labor">Casual Labor</option>
+      <option value="Employment">Employment</option>
+      <option value="Small Business">Small Business</option>
+      <option value="Farming">Farming</option>
+      <option value="Pension">Pension</option>
+      <option value="Government Assistance">Government Assistance</option>
+      <option value="Family/Wellwisher Assistance">Family/Wellwisher Assistance</option>
+    </select>
+    <label for="income-source-type">Income Source Type</label>
+  </div>
+</div>
+
+                            <div class="col-12 d-flex justify-content-between">
+                              <button class="btn btn-outline-secondary btn-prev">
+                                <i class="mdi mdi-arrow-left me-sm-1 me-0"></i>
+                                <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                              </button>
+                              <button class="btn btn-primary btn-next">
+                                <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span>
+                                <i class="mdi mdi-arrow-right"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Livestock -->
+                        <div id="livestock-form" class="content">
+                          <div class="content-header mb-3">
+                            <h6 class="mb-0">Livestock</h6>
+                            <small>Enter the Livestock details.</small>
+                          </div>
+                          <div class="row g-4">
+                            <div class="col-sm-6">
+                              <div class="form-floating form-floating-outline">
+                                <select id="livestock-type" class="form-control">
+                                  <option value="">Select Livestock Type</option>
+                                  <option value="Chicken">Chicken</option>
+                                  <option value="Cow">Cow</option>
+                                  <option value="Goat">Goat</option>
+                                  <option value="Rabbit">Rabbit</option>
+                                  <option value="Duck">Duck</option>
+                                </select>
+                                <label for="livestock-type">Livestock Type</label>
                               </div>
                             </div>
                             <div class="col-sm-6">
                               <div class="form-floating form-floating-outline">
-                                <input type="text" id="aggregate-event-attendees-adult-male" class="form-control" placeholder="Number of Attendees - Adult Male" />
-                                <label for="aggregate-event-attendees-adult-male">Number of Attendees - Adult Male</label>
-                              </div>
-                            </div>
-                            <div class="col-sm-6">
-                              <div class="form-floating form-floating-outline">
-                                <input type="text" id="aggregate-event-attendees-child-female" class="form-control" placeholder="Number of Attendees - Child Female" />
-                                <label for="aggregate-event-attendees-child-female">Number of Attendees - Child Female</label>
-                              </div>
-                            </div>
-                            <div class="col-sm-6">
-                              <div class="form-floating form-floating-outline">
-                                <input type="text" id="aggregate-event-attendees-child-male" class="form-control" placeholder="Number of Attendees - Child Male" />
-                                <label for="aggregate-event-attendees-child-male">Number of Attendees - Child Male</label>
-                              </div>
-                            </div>
-                            <div class="col-sm-6">
-                              <div class="form-floating form-floating-outline">
-                                <input type="text" id="home-visitor-name" class="form-control" placeholder="Home Visitor Name" />
-                                <label for="home-visitor-name">Home Visitor Name</label>
-                              </div>
-                            </div>
-                            <div class="col-sm-6">
-                              <div class="form-floating form-floating-outline">
-                                <input type="file" id="attachments" class="form-control" placeholder="Attachments" />
-                                <label for="attachments">Attachments</label>
+                                <input type="number" id="animals-owned" class="form-control" placeholder="Number of Animals Owned" />
+                                <label for="animals-owned">Number of Animals Owned</label>
                               </div>
                             </div>
                             <div class="col-12 d-flex justify-content-between">
@@ -862,49 +956,73 @@
                             </div>
                           </div>
                         </div>
-                        
-                        <!--distributions -->
-                        <div id="distribution-form" class="content">
+                        <!-- Poverty Issues -->
+                        <div id="poverty-issues-form" class="content">
                           <div class="content-header mb-3">
-                            <h6 class="mb-0">Distributions</h6>
-                            <small>Enter Distribution Details.</small>
+                            <h6 class="mb-0">Poverty Issues</h6>
+                            <small>Enter the Poverty Issues details.</small>
                           </div>
                           <div class="row g-4">
-                            <div class="col-sm-6">
+                            <div class="col-sm-12">
                               <div class="form-floating form-floating-outline">
-                                <input type="text" id="item-name" class="form-control" placeholder="Item Name" />
-                                <label for="item-name">Item Name</label>
+                                <select id="poverty-issue-name" class="form-control">
+                                  <option value="">Select Poverty Issue Name</option>
+                                  <option value="Food security">Food security</option>
+                                  <option value="Clean water">Clean water</option>
+                                  <option value="Medications">Medications</option>
+                                  <option value="School fees">School fees</option>
+                                  <option value="Rent assistance">Rent assistance</option>
+                                  <!-- Add more options here -->
+                                </select>
+                                <label for="poverty-issue-name">Poverty Issue Name</label>
                               </div>
                             </div>
-                            <div class="col-sm-6">
+                            
+                            <div class="col-12 d-flex justify-content-between">
+                              <button class="btn btn-outline-secondary btn-prev">
+                                <i class="mdi mdi-arrow-left me-sm-1 me-0"></i>
+                                <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                              </button>
+                              <button class="btn btn-primary btn-next">
+                                <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span>
+                                <i class="mdi mdi-arrow-right"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div id="improvement-indicators-form" class="content">
+                          <div class="content-header mb-3">
+                            <h6 class="mb-0">Improvement Indicators</h6>
+                            <small>Enter the Economic Improvement Indicators details.</small>
+                          </div>
+                          <div class="row g-4">
+                            <div class="col-sm-12">
                               <div class="form-floating form-floating-outline">
-                                <input type="number" id="quantity" class="form-control" placeholder="Quantity" />
-                                <label for="quantity">Quantity</label>
+                                <select id="improvement-indicator" class="form-control">
+                                  <option value="">Select Improvement Indicator</option>
+                                  <option value="Has 3 meals a day">Has 3 meals a day</option>
+                                  <option value="Able to pay school fees">Able to pay school fees</option>
+                                  <option value="Able to pay rent">Able to pay rent</option>
+                                  <option value="Able to buy medications">Able to buy medications</option>
+                                  <option value="Earning regular income">Earning regular income</option>
+                                  <!-- Add more options here -->
+                                </select>
+                                <label for="improvement-indicator">Improvement Indicator</label>
                               </div>
                             </div>
-                            <div class="col-sm-6">
-                              <div class="form-floating form-floating-outline">
-                                <input type="number" id="value" class="form-control" placeholder="Value" />
-                                <label for="value">Value</label>
-                              </div>
-                            </div>
-                            <div class="col-sm-6">
-                              <div class="form-floating form-floating-outline">
-                                <input type="text" id="uom" class="form-control" placeholder="Unit of Measure" />
-                                <label for="uom">Unit of Measure</label>
-                              </div>
+                            
                             </div>
                             <div class="col-12 d-flex justify-content-between">
                               <button class="btn btn-outline-secondary btn-prev">
                                 <i class="mdi mdi-arrow-left me-sm-1 me-0"></i>
                                 <span class="align-middle d-sm-inline-block d-none">Previous</span>
                               </button>
-                              <button class="btn btn-primary btn-next" disabled>
+                              <button class="btn btn-primary btn-next">
                                 <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span>
                                 <i class="mdi mdi-arrow-right"></i>
                               </button>
                             </div>
-                          </div>                        
+                          </div>
                         </div>
                       </form>
                     </div>

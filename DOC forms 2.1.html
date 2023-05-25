@@ -722,17 +722,32 @@
                               </div>
                             </div>
                             <div class="col-sm-6">
+                              <label class="form-check-label" for="primary-contact-flag">Primary Contact</label>
+                              <div class="mb-2"></div>
                               <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="primary-contact-flag" />
-                                <label class="form-check-label" for="primary-contact-flag">Primary Contact</label>
+                                <input type="radio" class="form-check-input" name="primary-contact-flag" id="primary-contact-yes" value="yes" />
+                                <label class="form-check-label" for="primary-contact-yes">Yes</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="radio" class="form-check-input" name="primary-contact-flag" id="primary-contact-no" value="no" />
+                                <label class="form-check-label" for="primary-contact-no">No</label>
                               </div>
                             </div>
+                            
+                            
                             <div class="col-sm-6">
+                              <label class="form-check-label" for="direct-beneficiary-flag">Direct Beneficiary</label>
+                              <div class="mb-2"></div>
                               <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="direct-beneficiary-flag" />
-                                <label class="form-check-label" for="direct-beneficiary-flag">Direct Beneficiary</label>
+                                <input type="radio" class="form-check-input" name="direct-beneficiary-flag"id="direct-beneficiary-yes" />
+                                <label class="form-check-label" for="direct-beneficiary-yes">Yes</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="radio" class="form-check-input" name="direct-beneficiary-flag" id="direct-beneficiary-no" value="no" />
+                                <label class="form-check-label" for="direct-beneficiary-no">No</label>
                               </div>
                             </div>
+                            
                             <div class="col-sm-6">
                               <div class="form-floating form-floating-outline">
                                 <input type="date" id="member-dob" class="form-control" />
@@ -791,11 +806,18 @@
                               </div>
                             </div>
                             <div class="col-sm-6">
+                              <label class="form-check-label" for="lunch-program-flag">Lunch Program</label>
+                              <div class="mb-2"></div>
                               <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="lunch-program-flag" />
-                                <label class="form-check-label" for="lunch-program-flag">Lunch Program</label>
+                                <input type="radio" class="form-check-input" name="lunch-program-flag" id="lunch-program-yes" value="yes" />
+                                <label class="form-check-label" for="lunch-program-yes">Yes</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="radio" class="form-check-input" name="lunch-program-flag" id="lunch-program-no" value="no" />
+                                <label class="form-check-label" for="lunch-program-no">No</label>
                               </div>
                             </div>
+                            
                             <div class="col-sm-6">
                               <div class="form-floating form-floating-outline">
                                 <input type="number" id="table-banking-savings" class="form-control" placeholder="Table Banking Savings Amount" />
@@ -809,15 +831,19 @@
                               </div>
                             </div>
                             <div class="col-sm-6">
-                            
+                              <div class="form-floating form-floating-outline">
                                 <select id="transport-status" class="form-select">
                                   <option value="" disabled selected>Select Transport Status</option>
-                                  <option value="active">Active</option>
-                                  <option value="inactive">Inactive</option>
+                                  <option value="Van-Limuru">Van-Limuru</option>
+                                  <option value="Van-Kamangu">Van-Kamangu</option>
+                                  <option value="Van 2">Van 2</option>
+                                  <option value="Motorbike">Motorbike</option>
+                                  <option value="None">None</option>
                                 </select>
-                                
-                              
+                                <label for="transport-status">Transport Status</label>
+                              </div>
                             </div>
+                            
                             <div class="col-sm-6">
                               <div class="form-floating form-floating-outline">
                                 <input type="text" id="parent-contact-name" class="form-control" placeholder="Parent Contact Name" />
@@ -832,35 +858,66 @@
                             </div>
                             <div class="col-sm-6">
                               <div class="form-floating form-floating-outline">
-                                <input type="text" id="program-level" class="form-control" placeholder="Program Level" />
+                                <select id="program-level" class="form-select">
+                                  <option value="" disabled selected>Select Program Level</option>
+                                  <option value="Respite">Respite</option>
+                                  <option value="Foundational">Foundational</option>
+                                  <option value="Pre-Vocational">Pre-Vocational</option>
+                                  <option value="Adult Centers">Adult Centers</option>
+                                  <option value="Home Based">Home Based</option>
+                                </select>
                                 <label for="program-level">Program Level</label>
                               </div>
                             </div>
+                            
                             <div class="col-sm-6">
-                              <div class="form-floating form-floating-outline">
-                                <input type="text" id="physio-services" class="form-control" placeholder="Physio Services Received" />
-                                <label for="physio-services">Physio Services Received</label>
-                              </div>
-                            </div>
-                            <div class="col-sm-6">
+                              <label class="form-check-label" for="physio-services">Physio Services Received</label>
+                              <div class="mb-2"></div>
                               <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="adpk-registered" />
-                                <label class="form-check-label" for="adpk-registered">ADPK Registered</label>
+                                <input type="radio" class="form-check-input" name="physio-services" id="physio-services-yes" value="yes" />
+                                <label class="form-check-label" for="physio-services-yes">Yes</label>
                               </div>
-                            </div>
-                            <div class="col-sm-6">
                               <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="nhif-coverage" />
-                                <label class="form-check-label" for="nhif-coverage">NHIF Coverage</label>
+                                <input type="radio" class="form-check-input" name="physio-services" id="physio-services-no" value="no" />
+                                <label class="form-check-label" for="physio-services-no">No</label>
                               </div>
                             </div>
                             <div class="col-sm-6">
+                              <label class="form-check-label" for="adpk-registered">ADPK Registered</label>
+                              <div class="mb-2"></div>
                               <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="nssf-coverage" />
-                                <label class="form-check-label" for="nssf-coverage">NSSF Coverage</label>
+                                <input type="radio" class="form-check-input" name="adpk-registered" id="adpk-registered-yes" value="yes" />
+                                <label class="form-check-label" for="adpk-registered-yes">Yes</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="radio" class="form-check-input" name="adpk-registered" id="adpk-registered-no" value="no" />
+                                <label class="form-check-label" for="adpk-registered-no">No</label>
                               </div>
                             </div>
                             <div class="col-sm-6">
+                              <label class="form-check-label" for="nhif-coverage">NHIF Coverage</label>
+                              <div class="mb-2"></div>
+                              <div class="form-check">
+                                <input type="radio" class="form-check-input" name="nhif-coverage" id="nhif-coverage-yes" value="yes" />
+                                <label class="form-check-label" for="nhif-coverage-yes">Yes</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="radio" class="form-check-input" name="nhif-coverage" id="nhif-coverage-no" value="no" />
+                                <label class="form-check-label" for="nhif-coverage-no">No</label>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <label class="form-check-label" for="nssf-coverage">NSSF Coverage</label>
+                              <div class="mb-2"></div>
+                              <div class="form-check">
+                                <input type="radio" class="form-check-input" name="nssf-coverage" id="nssf-coverage-yes" value="yes" />
+                                <label class="form-check-label" for="nssf-coverage-yes">Yes</label>
+                              </div>
+                              <div class="form-check">
+                                <input type="radio" class="form-check-input" name="nssf-coverage" id="nssf-coverage-no" value="no" />
+                                <label class="form-check-label" for="nssf-coverage-no">No</label>
+                              </div>
+                            </div>                            <div class="col-sm-6">
                               <div class="form-floating form-floating-outline">
                                 <input type="text" id="bursaries-received" class="form-control" placeholder="Bursaries Received" />
                                 <label for="bursaries-received">Bursaries Received</label>
@@ -957,10 +1014,20 @@
                           <div class="row g-4">
                             <div class="col-sm-6">
                               <div class="form-floating form-floating-outline">
-                                <input type="text" id="referral-type" class="form-control" placeholder="Referral Type" />
+                                <select id="referral-type" class="form-select">
+                                  <option value="" disabled selected>Select Referral Type</option>
+                                  <option value="Medical assessment">Medical assessment</option>
+                                  <option value="Educational assessment">Educational assessment</option>
+                                  <option value="Cheshire services">Cheshire services</option>
+                                  <option value="Chief">Chief</option>
+                                  <option value="Hospital">Hospital</option>
+                                  <option value="Police Post">Police Post</option>
+                                  <option value="Other">Other</option>
+                                </select>
                                 <label for="referral-type">Referral Type</label>
                               </div>
                             </div>
+                            
                             <div class="col-sm-6">
                               <div class="form-floating form-floating-outline">
                                 <input type="date" id="referral-date" class="form-control" placeholder="Referral Date" />
